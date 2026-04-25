@@ -1,0 +1,29 @@
+<div class="page">
+
+  <section class="hero">
+    <h1 class="mat-display-large">Hi, I'm <span class="accent">Nick Mountain</span></h1>
+    <p class="mat-body-large tagline">Software developer building clean, purposeful things.</p>
+    <div class="hero-actions">
+      <a mat-flat-button href="mailto:nicholasmountain11@gmail.com">
+        <mat-icon>mail</mat-icon>
+        Get in touch
+      </a>
+      <a mat-stroked-button href="https://github.com" target="_blank" rel="noopener">
+        <mat-icon>code</mat-icon>
+        GitHub
+      </a>
+    </div>
+  </section>
+
+  <mat-divider />
+
+  <section class="skills">
+    <h2 class="mat-title-large section-heading">Skills</h2>
+    <mat-chip-set>
+      @for (skill of skills; track skill) {
+        <mat-chip>{{ skill }}</mat-chip>
+      }
+    </mat-chip-set>
+  </section>
+
+</div>
