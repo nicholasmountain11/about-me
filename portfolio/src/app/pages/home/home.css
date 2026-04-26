@@ -24,6 +24,19 @@
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
 }
 
+.scattered-big {
+  position: absolute;
+  inset: 0;
+}
+
+.scattered-big img {
+  position: absolute;
+  width: 40vw;
+  height: 40vh;
+  object-fit: cover;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
 .scatter-1 {
   top: 12%;
   left: 6%;
@@ -48,6 +61,16 @@
   transform: rotate(3deg);
 }
 
+.scatter-5 {
+  position: absolute;
+  width: 40vw;
+  height: 40vh;
+  object-fit: cover;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  bottom: 15%;
+  left: 4%;
+}
+
 .card {
   position: relative;
   z-index: 1;
@@ -66,13 +89,6 @@
   letter-spacing: -0.5px;
 }
 
-.panel {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 64px;
-}
 
 .panel p {
   font-size: 2.5rem;
@@ -83,10 +99,49 @@
   margin: 0;
 }
 
-.panel-light {
-  background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('https://picsum.photos/seed/panel1/1600/900');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #1a1a2e;
+.panel-1 {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.split-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.split-left,
+.split-right {
+  position: absolute;
+  inset: 0;
+}
+
+.split-left {
+  background-color: #001337;
+  clip-path: polygon(0 0, 58% 0, 42% 100%, 0 100%);
+}
+
+.split-right {
+  background-color: #ffffff;
+  clip-path: polygon(58% 0, 100% 0, 100% 100%, 42% 100%);
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  width: 300px;
+  z-index: 1;
+}
+
+.logo-left {
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.logo-right {
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
