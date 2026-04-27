@@ -108,6 +108,92 @@
   overflow: hidden;
 }
 
+.panel-2 {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.collage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.collage-left {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.collage-left .img-hover {
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.collage-left img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.collage-right {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.collage-right .img-hover {
+  height: 50%;
+}
+
+.collage-right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-caption {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.img-hover:hover .img-caption {
+  opacity: 1;
+}
+
+.collage-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .split-bg {
   position: absolute;
   inset: 0;
