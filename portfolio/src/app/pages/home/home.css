@@ -247,6 +247,31 @@
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 768px) {
+  .split-left {
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0 45%);
+  }
+
+  .split-right {
+    clip-path: polygon(0 45%, 100% 55%, 100% 100%, 0 100%);
+  }
+
+  .logo {
+    width: 200px;
+    left: 50%;
+  }
+
+  .logo-left {
+    top: 25%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logo-right {
+    top: 75%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .img-caption a {
   background: rgba(255, 255, 255, 0.2);
   padding: 1px 6px;
