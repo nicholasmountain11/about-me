@@ -175,12 +175,50 @@
   display: block;
 }
 
-.grid img {
-  width: 50%;
-  height: 50%;
-  object-fit: scale-down;
-  /* display: block; */
+.grid-tile {
+  position: relative;
 }
+
+.tile-icon {
+  width: auto;
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.tile-desc {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: #fff;
+  text-align: center;
+  
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.tile-desc p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .tile-desc p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tile-desc p {
+    font-size: 0.65rem;
+  }
+}
+
+.grid-tile:hover .tile-icon { opacity: 0; }
+.grid-tile:hover .tile-desc { opacity: 1; }
 
 .grid-cell-1 {
   background-color: #001337;
