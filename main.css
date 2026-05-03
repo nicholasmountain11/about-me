@@ -200,6 +200,7 @@ body {
 }
 
 .logo.img-hover {
+  position: absolute;
   overflow: visible;
 }
 
